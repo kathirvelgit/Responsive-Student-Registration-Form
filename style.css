@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #92caef;
+  color: black;
+}
+
+header {
+  background-color: #1b6ba4;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.formSection {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+#studentForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  padding: 12px;
+  border: 1px solid #b4b2b2;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: none;
+  border-color: #1b6ba4;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.gender input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender {
+  display: flex;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.gender label {
+  display: flex; 
+  align-items: center;
+  gap: 6px; 
+  font-weight: normal;
+}
+
+.subbtn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+
+  background-color: #4daaec;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 17px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.subbtn:hover {
+  background-color: #0a5678;
+  transform: scale(1.02);
+}
+
+.tableSection {
+  margin-top: 40px;
+}
+
+.tableSection h2 {
+  margin-bottom: 10px;
+  
+  
+}
+
+.tablecontain {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  background-color: white;
+}
+thead {
+  background-color: #1b6ba4;
+  color: white;
+}
+
+th,
+td {
+  
+  border: 1px solid #bcb9b9;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e3dfdf;
+}
+
+tbody tr:hover {
+  background-color: #e8f0ff;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .formSection {
+    padding: 20px;
+  }
+
+  .gender {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subbtn {
+    font-size: 16px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

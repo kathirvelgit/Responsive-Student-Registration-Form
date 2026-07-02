@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Student Registraion Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Student Registraion Form</h1>
+    </header>
+
+    <main>
+      <section class="formSection">
+        <form id="studentForm">
+          <div class="form">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="Enter First Name "
+              required
+            />
+          </div>
+          <div class="form">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Enter Last Name "
+              required
+            />
+          </div>
+          <div class="form">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Email "
+              required
+            />
+          </div>
+          <div class="form">
+            <label for="address">Address</label>
+            <textarea
+              name=""
+              id="address"
+              rows="4"
+              placeholder="Enter Address"
+              required
+            ></textarea>
+          </div>
+          <div class="form">
+            <label for="pincode">Pincode</label>
+            <input
+              type="text"
+              id="pincode"
+              maxlength="6"
+              pattern="[0-9]{6}"
+              required
+            />
+          </div>
+          <div class="form">
+            <label>Gender</label>
+
+            <div class="gender">
+              <label for="male"><input type="radio" name="gender" id="male" value="Male" required/>Male</label>
+              <label for="female"
+                ><input type="radio" name="gender" id="female" value="Female" required />Female</label
+              >
+            </div>
+          </div>
+          <div class="form">
+            <label for="state">State</label>
+            <select id="state" required>
+              <option value="" disabled selected>Select State</option>
+
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+            </select>
+          </div>
+          <div class="form">
+            <label for="country">Country</label>
+            <select id="country" required>
+              <option value="" disabled selected>Select Country</option>
+
+              <option>India</option>
+              <option>Canada</option>
+              <option>Australia</option>
+              <option>China</option>
+            </select>
+          </div>
+
+          <button type="submit" class="subbtn">Submit</button>
+        </form>
+      </section>
+      <section class="tableSection">
+        <h2>Registered Students List</h2>
+        <div class="tablecontain">
+          <table>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>State</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+
+            <tbody id="tablebody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
